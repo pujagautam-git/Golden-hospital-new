@@ -1,0 +1,148 @@
+ .emergency-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.emergency-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.emergency-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.emergency-text h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e3a6f;
+}
+
+.emergency-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #605d5d;
+  margin-bottom: 15px;
+}
+
+.emergency-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.emergency-image img {
+    
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.emergency-benefits-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fafafa;
+}
+
+.emergency-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.benefit-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px dashed #ddd;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.benefit-text {
+  font-size: 1rem;
+  color: #333;
+}
+.emergency-faq-section {
+  padding: 50px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.emer-faq-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.emer-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.emer-faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.emer-faq-item:hover {
+  background: #f9f9f9;
+}
+
+.emer-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.emer-faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.emer-faq-icon.rotate {
+  transform: rotate(90deg);
+}
+
+.emer-faq-answer {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+  padding-left: 5px;
+  line-height: 1.5;
+}

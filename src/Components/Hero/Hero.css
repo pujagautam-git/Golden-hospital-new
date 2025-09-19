@@ -1,0 +1,176 @@
+ * {
+    box-sizing: border-box;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0,0,0,0.4); Dark transparent overlay */
+    z-index: 1;
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/about_section_bg.png');
+    background-size: cover;
+    background-position: center;
+   min-height:70vh; /* allows growth if content increases */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden; /* Prevent unwanted scroll on smaller devices */
+    position:relative;
+}
+
+@media (min-width: 1025px) {
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+        padding: 40px 80px;
+        height: auto;
+    }
+}
+.hero-content {
+    flex:1;
+    max-width :60%;
+}
+
+.hero-image-container{
+    flex:1;
+    max-width:60%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.hero-content,
+.hero-image-container {
+    position: relative;
+    z-index: 2;
+}
+.hero-image{
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    object-fit:cover;
+    margin-left:30px;
+}
+.hero-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    word-wrap: break-word; /* Ensure text breaks properly on small screens */
+    
+}
+
+.hero-description {
+    color: #fff;
+    text-align: justify;
+    max-width: 800px; /* Limit width for better readability */
+    margin-bottom: 30px;
+    line-height: 1.6; /* Improve readability */
+}
+
+.hero-button {
+    background-color: #28a428;
+    padding: 12px 24px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #365e6b;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large Tablets / Small Laptops (1200px and below) */
+@media (max-width: 1200px) {
+    .hero-heading {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        max-width: 700px;
+    }
+}
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+    .hero-heading {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        max-width: 600px;
+        padding: 0 20px;
+    }
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-image-container {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+
+
+/* Small Tablets (768px and below) */
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 1.8rem;
+    }
+
+    .hero-description {
+        max-width: 500px;
+        padding: 0 15px;
+    }
+
+    .hero-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .hero-image {
+    margin-left: 0;
+    width: 90%;
+    height: auto;
+}
+
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        max-width: 90%; /* Allow more width for smaller screens */
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    .hero-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+     .hero-container {
+        height: auto;
+        padding: 20px 10px;
+    }
+}

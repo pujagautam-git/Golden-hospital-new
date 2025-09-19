@@ -1,0 +1,61 @@
+ .department-carousel {
+  padding: 60px 20px;
+  background: #f9fbff;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 40px;
+}
+
+/* Department Cards */
+.dept-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin: 0 10px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  min-height: 300px;
+}
+
+.dept-card:hover {
+  transform: translateY(-8px);
+}
+
+.dept-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.dept-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 12px;
+}
+
+.dept-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Slick carousel default overrides */
+.slick-slide {
+  padding: 10px;
+}
+
+.slick-dots li button:before {
+  color: #003366;
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #0073e6;
+}

@@ -1,0 +1,103 @@
+
+
+
+
+  /* TrendingTopics.css */
+.trending-topics-container {
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    margin: 50px 0;
+  }
+  
+  .trending-heading {
+    font-size: 2.5rem;
+    color: #1A3D7C;
+    margin: 10px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .disease-button {
+    background-color: #50be60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .disease-button:hover {
+    background-color: #365e6b;
+  }
+
+
+
+  .dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    background-color:#e8f1f3;
+  }
+  
+  .dashboard-section {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    color:#365e6b;
+    
+
+  }
+  .dashboard-text {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #447c8f;
+    padding: 5px;
+    border-radius: 10px;
+  
+  }
+  .dashboard-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+   .dashboard-text p {
+    font-size: 1.2rem;
+    color: white;
+   }
+
+  .ic {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #365e6b;
+   
+  }
+  .divi {
+    width: 1px;
+    height: 150px;
+    background-color: #ccc;
+    margin: 0 10px;
+    align-self: center; /* Vertically center the divider */
+  }
+  @media (max-width: 1024px) {
+    .video-banner-container {
+        height: 65vh;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+    .trending-heading {
+        font-size: 1.5rem;
+        margin: 20px;
+      }
+}

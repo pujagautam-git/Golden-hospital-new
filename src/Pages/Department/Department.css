@@ -1,0 +1,104 @@
+ .department-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Breadcrumb Section */
+.department-breadcrumb {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  padding: 60px 20px;
+  text-align: left;
+}
+
+.breadcrumb-overlay {
+  background: rgba(240, 240, 240, 0.9);
+  padding: 40px 20px;
+}
+
+.breadcrumb-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumb-container p {
+  font-size: 14px;
+  color: #555;
+}
+
+.breadcrumb-container a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.breadcrumb-container a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-container h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #003366;
+  margin-top: 10px;
+}
+
+/* Content Section */
+.department-content {
+  padding: 60px 20px;
+  background: #f8fafc;
+}
+
+.department-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.department-img img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.department-text {
+  flex: 1;
+}
+
+.department-text h4 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.department-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.department-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .department-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .department-img img {
+    max-width: 100%;
+  }
+}

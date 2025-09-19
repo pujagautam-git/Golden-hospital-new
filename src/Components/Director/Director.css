@@ -1,0 +1,155 @@
+  /* General container styling */
+.direct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #e8f1f3;
+}
+
+/* Chairperson section */
+.chairperson {
+  display: flex;
+  flex-direction: row; /* Align image and text side by side */
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  text-align: left;
+  background-color: #e8f1f3;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.chairperson .image {
+  width: 380px;
+  height: 430px;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  background: #fff;
+  border-radius: 8px;
+  object-fit: cover; /* Ensure the image is contained properly */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
+}
+
+.chairperson .text {
+  flex: 1;
+  justify-content: flex-start;
+  color: #365e6b; /* Text contrast against the background */
+}
+
+.chairperson h1 {
+  font-size: 1.8rem;
+  color: #334133; /* Darker shade for heading */
+}
+
+.chairperson h2 {
+  font-size: 1.5rem;
+  color: #365e6b;
+}
+
+.chairperson .opinion {
+  font-size: 1rem;
+  font-style: italic;
+  color: #777;
+  text-align: justify;
+}
+
+/* Directors section */
+.directors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: auto;
+}
+
+.pic {
+  display: flex;
+  flex-direction: row; /* Align image and text side by side */
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: auto; /* Consistent card width */
+  background: white; /* White background for contrast */
+  background-color: #e8f1f3;
+}
+
+.pic .image {
+  width: 320px;
+  height: 380px;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  background: white;
+  border-radius: 8px;
+  object-fit: cover; /* Ensure the image is contained properly */
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: #365e6b;
+}
+
+.pic .text {
+  flex: 1;
+  color: #365e6b; /* Text contrast against the background */
+}
+
+.pic h1 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  color: #334133; /* Darker shade for heading */
+}
+
+.pic h2 {
+  font-size: 1.5rem;
+  color: #365e6b;
+  margin-bottom: 1rem;
+}
+
+.pic .opinion {
+  font-size: 1rem;
+  font-style: italic;
+  color: #777;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .chairperson,
+  .pic {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center;
+  }
+
+  .chairperson .image,
+  .pic .image {
+    width: 200px;
+    height: 200px; /* Adjust image size for smaller screens */
+  }
+
+  .chairperson .text,
+  .pic .text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .chairperson .image,
+  .pic .image {
+    width: 150px;
+    height: 150px; /* Smaller images for very small screens */
+  }
+
+  .chairperson h1,
+  .pic h1 {
+    font-size: 1.2rem;
+  }
+
+  .chairperson h2,
+  .pic h2 {
+    font-size: 1rem;
+  }
+
+  .chairperson .opinion,
+  .pic .opinion {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,78 @@
+.slider-section {
+  background: linear-gradient(to bottom, #030b49 50%, #ebe1dd 50%);
+  padding: 60px 0;
+}
+
+.slider-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.slider-subtitle {
+  color: #f18f01;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.slider-title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.slider-card {
+  background: white;
+  color: #333;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  min-height: 220px;
+}
+
+.slider-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.slider-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.slider-role {
+  font-size: 0.9rem;
+  color: gray;
+}
+.slider-head {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.slider-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #f18f01;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #f18f01;
+}

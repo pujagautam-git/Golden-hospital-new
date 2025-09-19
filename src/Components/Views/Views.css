@@ -1,0 +1,109 @@
+/* Wrapper container */
+.background-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    background: #fff; /* remove background image */
+}
+
+/* Headings styling */
+.news-header {
+    font-size: 2.5rem;
+    color: #334133;
+    margin-bottom: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for 3 videos */
+.views-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* equal spacing between cards */
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual video card */
+.views {
+    flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+    max-width: 350px;
+    background: #e8f1f3;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.views iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* Hover effect */
+.views:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove divider completely (not needed now) */
+.divide {
+    display: none;
+}
+
+/* Button styling */
+.column-button {
+    display: block;           /* make it take full width like a block element */
+    margin: 30px auto 0;      /* auto centers horizontally */
+    background-color: #334133;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: center;       /* make text stay center */
+}
+
+.column-button:hover {
+    background-color: #556655;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .views {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .views {
+        flex: 1 1 100%; /* full width on mobile */
+        max-width: 100%;
+    }
+
+    .news-header {
+        font-size: 2rem;
+    }
+
+    iframe {
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    .column-button {
+        width: 100%;
+    }
+}

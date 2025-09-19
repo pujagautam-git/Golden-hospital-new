@@ -1,0 +1,175 @@
+
+
+.doctor-detail {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+.header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/* Back Button */
+.back-button {
+    background-color:  #365e6b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+     margin-top: 55px;
+    margin-bottom: 15px;
+}
+
+.back-button:hover {
+    background-color: #2563cd;
+}
+
+/* Doctor Header */
+.doctor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #dfa748;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.name-department {
+    display: flex;
+    align-items: center;
+    
+}
+
+.name-department h1 {
+    font-size: 24px;
+    margin-right: 10px;
+    color:#2c377d;
+}
+
+.name-department h2 {
+    font-size: 18px;
+    color: #545050;
+}
+
+.vertical-divider {
+    height: 30px;
+    width: 2px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.doctor-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #365e6b;
+}
+
+/* Main Content */
+.main-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Qualification & Shifts Side by Side */
+.doctor-qualification-shifts {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Section Styling */
+.doctor-qualification, 
+.doctor-shifts {
+    width: 48%;
+    background: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Area of Focus & Location Side by Side */
+.doctor-focus-location {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.doctor-focus, 
+.doctor-location {
+    width: 48%;
+    background: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    color: #1f6982;
+}
+
+/* Shift Timings */
+.shift-timings p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.shift-timings strong {
+    color: #333;
+}
+.locate{
+    background-color: #dfa748;
+    padding:5px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-contents {
+        flex-direction: column;
+    }
+
+    .doctor-qualification-shifts, 
+    .doctor-focus-location {
+        flex-direction: column;
+    }
+
+    .doctor-qualification, 
+    .doctor-focus, 
+    .doctor-location, 
+    .doctor-shifts {
+        width: 100%;
+    }
+
+    .doctor-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .doctor-image {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,511 @@
+/* General container styling */
+.doc-team {
+    font-size: 2.5rem; /* Title size */
+    color: #000;
+    text-align: center;
+    margin: 3rem;
+    font-family: 'Montsarret', sans-serif;
+  }
+  .doc-team  Span{
+    color: #1A3D7C;
+  }
+  
+  .depth {
+    color: #365e6b;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  .section-title {
+  text-align: center;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.3rem; /* You can increase this if needed */
+  font-weight: 600;
+  color: #365e6b;
+  margin: 3rem 0 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+ 
+}
+  
+  /* Department buttons styling */
+  .department-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .department-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #41798b;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .department-button.active {
+    background-color: #365e6b;
+  }
+  
+  .department-button:hover {
+    background-color: #dfa748;
+  }
+  
+  /* Cart container styling */
+  .cart-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Single column layout */
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px; /* Constrain the maximum width */
+    width: auto; /* Ensure it takes full width within the constraint */
+  }
+  
+  /* Individual cart row styling */
+  .cart-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%; /* Ensure it takes full width of its container */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Prevent content from overflowing */
+    position: relative; /* Added for button positioning */
+  }
+  
+  .cart-row:hover {
+    transform: translateY(-25px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cart-headerr {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 1rem;
+    background-color: #E6F0FA;
+    padding: 1rem;
+    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    justify-content: space-between; /* Space between heading and button */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Ensure the container is positioned */
+}
+  
+  .cart-headerr .dividerr {
+    width: 1px; /* Vertical divider */
+    height: 24px; /* Adjust height as needed */
+    background-color: rgba(65, 121, 139, 0.3);
+    margin: 0 0.5rem; /* Horizontal spacing */
+    display: inline-block;
+  }
+  
+  .cart-headerr h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #41798b;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .cart-headerr h4 {
+    font-size: 1rem;
+    color: #41798b;
+    margin: 0;
+    opacity: 0.8; /* Slightly lighter color for department */
+    font-family: Arial, sans-serif;
+  }
+  
+   /* .cart-headerr .divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(65, 121, 139, 0.3);
+    margin: 0.5rem 0;
+  }  */
+  
+  /* Cart content styling */
+  .cart-contents {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0 1rem 1rem 1rem; /* Add padding to align content properly */
+    width: 100%; /* Ensure it takes full width */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling for the image */
+  .cart-image img {
+    width: 200px; /* Passport size photo */
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #f4f4f4;
+  }
+  
+  /* Styling for the text details */
+  .cart-infoo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%; /* Adjust width to account for image */
+    font-family: Arial, sans-serif;
+  }
+  
+  .cart-infoo h4 {
+    font-size: 16px;
+    margin: 0;
+    color:#555;
+    padding-left: 10px;
+    font-family: 'Lato', sans-serif;
+  } 
+  
+  .cart-headerr .more-info-button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #41798b;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right:10px;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Push the button to the right */
+}
+  
+  .more-info-button:hover {
+    background-color: #21e74c;
+  }
+  .officer-picture {
+  width: 100%;
+  
+}
+
+.officer-container {
+  width: 100%;
+  margin:10px 0;
+
+}
+
+.officer-image{
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  
+ 
+}
+
+.off-title {
+  width: 100%;
+  background-color:#e8f1f3;; /* or any color you like */
+  color:#41798b;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px 0;
+  font-size: 2rem;
+  margin: 15px 0; /* remove default h1 margin */
+}
+
+   .team-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%; /* Ensure it takes full width of its container */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Prevent content from overflowing */
+    position: relative; /* Added for button positioning */
+  }
+  
+  .team-row:hover {
+    transform: translateY(-25px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .team-headerr {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 1rem;
+    background-color: #e8f1f3;
+    padding: 1rem;
+    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    height:54px;
+    justify-content: space-between; /* Space between heading and button */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Ensure the container is positioned */
+}
+  
+  
+  .team-headerr h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #357a91;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .divider {
+    height: 2px; 
+    width: 90%; 
+    background-color:  #dfa748;
+    margin:0;
+   
+}
+  .locc {
+    display: flex;
+    font-size: 1rem;
+    color: #555;
+    margin: 5px;
+}
+.locc img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    background-color: #dfa748;
+    padding:5px;
+    border-radius: 2px;
+}
+.achh {
+    display: flex;
+    font-size: 1rem;
+    color: #555;
+    margin: 5px;
+}
+
+.achh img{
+  width: 20px; /* Adjust icon size */
+    height: 20px;
+    background-color: #dfa748;
+    padding:5px;
+    border-radius: 2px;
+}
+  .team-headerr h4 {
+    font-size: 1rem;
+    color: #41798b;
+    margin: 0;
+    opacity: 0.8; /* Slightly lighter color for department */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* .team-headerr .divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(65, 121, 139, 0.3);
+    margin: 0.5rem 0;
+  }
+   */
+  /* Cart content styling */
+  .team-contents {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0 1rem 1rem 1rem; /* Add padding to align content properly */
+    width: 100%; /* Ensure it takes full width */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling for the image */
+  .team-image img {
+    width: 200px; /* Passport size photo */
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #f4f4f4;
+  }
+  
+  
+  .team-infoo h4 {
+    font-size: 12px;
+    margin: 0;
+    color:#555;
+    padding-left: 10px;
+    font-family: 'Lato', sans-serif;
+  }  
+  .team-image img {
+    width: 170px;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #f4f4f4;
+}
+   .team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Single column layout */
+    gap: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px; /* Constrain the maximum width */
+    width: auto; /* Ensure it takes full width within the constraint */
+  }
+  .area{
+      margin-bottom: 0;
+    font-size: 1.2rem;
+    color:#41798b;
+  }
+  
+  .dep {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+    margin: 5px;
+}
+
+
+.dep img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    background-color: #dfa748;
+    padding:5px;
+    border-radius: 2px;
+}
+
+.dep p {
+    margin: 0;
+    font-size: 1.2rem;
+    color:#41798b;
+}
+.experience{
+   
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color:#41798b;
+}
+.divideerr {
+    height: 2px; 
+    width: 90%; 
+    background-color:  #dfa748;
+    margin:0;
+   
+}
+.loc {
+    display: flex;
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.loc img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    background-color: #dfa748;
+    padding:5px;
+    border-radius: 2px;
+}
+.ach {
+    display: flex;
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.ach p {
+    margin: 0;
+    font-size: 1.2rem;
+    color:#41798b;
+}
+.ach img{
+  width: 20px; /* Adjust icon size */
+    height: 20px;
+    background-color: #dfa748;
+    padding:5px;
+    border-radius: 2px;
+}
+
+.loc p {
+    margin: 0;
+    font-size: 1.2rem;
+    color:#41798b;
+}
+.location{
+   
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color:#41798b;
+}
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .cart-container {
+      grid-template-columns: 1fr; /* Stack one item per row on smaller screens */
+      padding: 1rem;
+    }
+  
+    .cart-row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .cart-image img {
+      width: 80px;
+      height: 100px;
+    }
+  
+    .cart-infoo h4 {
+      font-size: 0.9rem;
+    }
+  
+    .cart-headerr .more-info-button {
+        padding: 8px 12px; /* Smaller padding */
+        font-size: 12px; /* Smaller font size */
+    }
+    .dep, .loc, .ach {
+        justify-content: center;
+    }
+    .officer-image {
+    max-height: 400px; /* Reduce height for tablets */
+  }
+  }
+  
+  @media (max-width: 480px) {
+    .doc-team {
+      font-size: 2rem;
+    }
+  
+    .depth {
+      font-size: 1rem;
+    }
+     .dep, .loc, .ach {
+        justify-content: center;
+    }
+  
+    .department-button {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  
+    .cart-headerr h3 {
+      font-size: 1.3rem;
+    }
+  
+    .cart-headerr h4 {
+      font-size: 1rem;
+    }
+  
+        .cart-headerr .more-info-button {
+            padding: 6px 10px; /* Even smaller padding */
+            font-size: 11px; /* Smaller font size */
+        }
+         .officer-image {
+    max-height: 300px; /* Reduce height for mobile phones */
+  }
+               }
+      

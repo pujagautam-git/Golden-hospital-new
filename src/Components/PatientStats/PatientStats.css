@@ -1,0 +1,85 @@
+.patient-stats-section {
+  background-color:#1f3a6e;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: center;
+  gap: 70px;
+} 
+
+.stat-box {
+  background: transparent;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis */
+ align-items: center;
+ display: flex;
+ box-sizing: border-box;
+ gap: 5px;
+ min-width:150px;
+  
+}
+
+.pstat-icon {
+  font-size: 56px;
+  color: #eee;
+  margin-bottom: 10px;
+  width:70px;
+  background-color: none;
+  height:70px;
+
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 991px) {
+  .stats-row {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .stat-box {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* Phone (below 768px) */
+@media (max-width: 767px) {
+  .stats-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stat-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .stat-icon {
+    font-size: 48px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+}
+

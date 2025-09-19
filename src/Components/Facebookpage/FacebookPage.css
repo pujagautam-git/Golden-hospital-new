@@ -1,0 +1,237 @@
+ .facebook-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.fab-fb-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Container for the content */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    width: 90%;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Style for the 'Why Choose Us' section */
+.why-choose-us {
+    text-align:center;
+    padding: 20px 30px;
+    background-color: #fff;
+    flex: 1 1 65% /* Take up 50% of space with some gap */
+   
+}
+
+.why-choose-us h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-size: 37px;
+    font-weight: 600;
+    margin-bottom: -15px;
+   margin-left: -75px;
+}
+.why-choose-us h1 span {
+    color:#0b4575;
+}
+ .fab-stats-section {
+  /* background-color:rgba(11, 69, 117, 0.96); */
+  padding: 1px 0px;
+  
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.fab-container {
+    display: flex;
+    flex:1 1 50%;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-height: 350px;
+    overflow: auto;
+   
+   
+}
+.fab-box {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  min-height: 150px; /* Add a minimum height */
+  box-sizing: border-box; /* Ensure padding doesn't add to width */
+    
+}
+.fab-box:hover {
+  transform: translateY(-8px); /* slightly raise the box */
+  box-shadow: 0 8px 20px rgba(11, 69, 117, 0.3); /* stronger shadow on hover */
+  cursor: pointer; /* pointer cursor on hover */
+}
+.fab-icon {
+  /* font-size: 67px; */
+  color: #eee;
+  margin-top: 5px;
+  flex-shrink:0;
+   background-color: #50be60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+}
+.fab-icon svg{
+    width:35px;
+    height:35px;
+}
+
+.fab-box-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex:1;
+  text-align: left;
+}
+.fab-title {
+    font-size: 19px;
+  font-weight: 600;
+  color: #0b4575;
+  margin: 0 0 8px 0;
+  display: flex;
+  
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.1;
+  
+}
+    
+.fab-description {
+   font-size: 14px;
+  font-weight: 440;
+  color: #7b7b7b;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.1;
+}
+
+.facebook-plugin {
+    flex: 1 1 35%; /* or adjust width as needed */
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    align-items: center;
+}
+
+/* Style for the Facebook image */
+.fb-image {
+    flex: 1 1 40%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fb-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Style for the Facebook page plugin */
+.fb-page {
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .facebook-page {
+        padding: 10px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .why-choose-us {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        padding: 20px;
+         margin-bottom: 20px;
+    }
+     .facebook-plugin {
+    flex: 1 1 100%;           /* Full width */
+    max-width: 100%;          /* Remove max-width limit */
+    margin-top: 20px;         /* Space from above */
+    justify-content: flex-start; /* Align left or center as you want */
+  }
+
+    .fab-box {
+        flex: 1 1 100%; /* Full width for fab boxes */
+        margin-bottom: 15px;
+    }
+    
+}
+@media (max-width: 480px) {
+    .why-choose-us h1 {
+        font-size: 28px;  /* Smaller heading */
+        margin-left: 0;   /* Reset negative margin */
+        text-align: center;
+        margin-bottom:10px;
+    }
+
+    .why-choose-us {
+    
+        padding: 15px 10px;
+    }
+
+    .fab-box {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .fabicon {
+        width: 40px;
+        height: 50px;
+        padding: 8px;
+        font-size: 40px;
+    }
+
+    .fab-title {
+        font-size: 16px;
+    }
+
+    .fab-description {
+        font-size: 13px;
+    }
+}

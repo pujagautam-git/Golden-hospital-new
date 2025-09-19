@@ -1,0 +1,341 @@
+/* ---------- Base / layout ---------- */
+* { box-sizing: border-box; }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #E6F0FA;
+  padding: 10px 60px;
+  transition: padding 0.25s ease, background 0.25s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* smaller/shrunk navbar on scroll */
+.navbar.scrolled {
+  padding: 0 40px;
+  margin:0;
+}
+
+/* keep contents centered and constrained */
+.top-row {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, center area grows, right fixed */
+  gap: 20px;
+  padding: 0 8px; /* small inner padding */
+}
+
+/* ---------- Left / Center / Right containers ---------- */
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* logo stays left and does not grow */
+.nav-left {
+  flex: 0 0 auto;
+}
+
+/* center grows to take remaining space and centers its contents */
+.nav-center {
+  flex: 1 1 auto;
+  justify-content: center; /* center the UL horizontally */
+}
+
+/* right controls (call + hamburger) fixed width */
+.nav-right {
+  flex: 0 0 auto;
+  gap: 12px;
+}
+
+/* ---------- Logo ---------- */
+.nav-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: height 0.25s ease;
+}
+
+.navbar.scrolled .logo {
+  height: 50px;
+}
+
+/* ---------- Center nav list (horizontal) ---------- */
+.nav-center ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;         /* space between menu items */
+  margin: 0;
+  padding: 0;
+  list-style: none;  /* remove bullets */
+}
+
+.nav-center li {
+  position: relative;
+  color:#1A3D7C;
+}
+
+/* link style */
+.nav-button {
+  text-decoration: none;
+  color: #1A3D7C;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 0;
+  display: inline-block;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.nav-button:hover {
+  color:#34C759; /* or choose any color */
+  transform: translateY(-1px);
+}
+
+
+/* small divider if needed */
+.divider { width: 1px; background: rgba(0,0,0,0.06); }
+
+/* ---------- Right controls ---------- */
+/* .nav-btn.callus {
+  background: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 28px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+.nav-btn.callus :hover{
+  background-color: #ffb7e6;
+} */
+
+.hamburger {
+  display: none; /* shown on mobile via media query below */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* .desktop-call {
+  display: inline-block;
+} */
+.mobile-call {
+  display: none;
+}
+
+.mobile-whatsapp {
+  display: none; /* hidden by default */
+}
+.mobile-call a,
+.mobile-whatsapp a
+ {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* inherit text color */
+}
+.mobile-whatsapp .whatsapp-btn {
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.mobile-whatsapp .whatsapp-icon {
+  font-size: 20px;
+}
+/* Call + WhatsApp stack */
+.contact-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center; /* keeps them aligned right on desktop */
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.desktop-whatsapp,
+.desktop-whatsapp:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.whatsapp-btn .whatsapp-icon {
+  font-size: 20px;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  background: #fff;
+  padding:0;
+  list-style: none;
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #34c759;
+}
+
+.chevron {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+/* Target ONLY the services menu inside dropdown */
+.dropdown-menu .services-menu {
+  display: grid; /* no !important needed */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 6px 12px;   /* spacing between items */
+  padding: 8px 12px; /* inner padding */
+  margin: 0;
+  min-width: 350px; /* adjust width */
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Keep UL from breaking the grid */
+.dropdown-menu .services-menu ul {
+  display: contents;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* LI styling */
+.dropdown-menu .services-menu li a {
+  display: block;
+  padding: 6px 10px;
+  font-size: 15px;
+  white-space: nowrap;     /* single line text */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #1A3D7C;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.dropdown-menu .services-menu li a:hover {
+  background: #34C759;
+  color: #fff;
+}
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .nav-logo {
+    height: 80px;
+  }
+
+  .nav-center ul {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-center {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    display: none;
+  }
+
+  .nav-center.open {
+    display: flex;
+  }
+
+  .nav-center ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .desktop-call,
+  .desktop-whatsapp {
+    display: none;
+  }
+
+  .mobile-call,
+  .mobile-whatsapp {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-call .nav-btn.callus {
+    width: 100%;
+    text-align: center;
+  }
+  .dropdown-menu {
+    position: relative; /* relative to parent li */
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    min-width: 100%;    /* full width on mobile */
+    display: none;      /* hidden by default */
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;      /* show when parent li is clicked */
+  }
+
+  /* Nested grid for services menu */
+  .dropdown-menu .services-menu {
+    grid-template-columns: 1fr; /* stack items vertically */
+    min-width: 100%;
+    padding-left: 0;
+    gap: 6px 0;
+  }
+}

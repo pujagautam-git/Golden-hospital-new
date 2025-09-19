@@ -1,0 +1,30 @@
+ @keyframes slideInUp {
+  from { transform: translateY(80px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Base state (hidden before scrolling into view) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+.animate-on-scroll.show {
+  opacity: 1;
+  /* transform: translateY(0); */
+}
+
+/* When visible, play animation */
+.animate-up.show { animation: slideInUp 2s ease-out forwards; }
+.animate-left.show { animation: slideInLeft 2s ease-out forwards; }
+.animate-right.show { animation: slideInRight 2s ease-out forwards; }

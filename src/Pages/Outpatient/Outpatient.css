@@ -1,0 +1,174 @@
+.over-patient-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.over-patient-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.over-patient-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.over-patient-text h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e3a6f;
+}
+
+.over-patient-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #605d5d;
+  margin-bottom: 15px;
+}
+
+.over-patient-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.over-patient-image img {
+    max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.opd-section {
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.opd-container {
+  max-width: 800px;
+  text-align: center;
+}
+
+.opd-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.opd-subtext {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.opd-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.opd-item {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opd-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.15);
+}
+
+.opd-icon {
+  font-size: 1.8rem;
+  color: #1565c0;
+}
+.outpatient-section {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 60px 30px;
+  background-color: #fff;
+}
+
+.outpatient-left {
+  flex: 1;
+}
+
+.outpatient-subtitle {
+  font-size: 14px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.outpatient-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0a1f44;
+}
+
+.outpatient-title span {
+  color: #113c8d;
+  /* border-bottom: 2px solid #113c8d; */
+}
+
+.outpatient-right {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.out-faq-item {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 16px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.out-faq-item:hover {
+  background: #f7f7f7;
+}
+
+.out-faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}
+
+.out-faq-icon {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.out-faq-answer {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.out-faq-item.active .out-faq-question {
+  color: #113c8d;
+}

@@ -1,0 +1,92 @@
+ .time{
+  font-family: Arial, sans-serif;
+  max-width: 1200px; /* Increased max-width for better spacing */
+  margin: 0px auto;
+  /* padding: 20px; */
+  color:#6d7771;
+  border-radius: 10px;
+}
+.hospital-timing-container {
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    max-width: 1200px; /* Increased max-width for better spacing */
+    margin-bottom:40px;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .hospital-timing-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    line-height: 26px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+   .hospital-timing-container h5 {
+    font-size: 15px;
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: #161617;
+    text-align: center;
+    margin-bottom: 25px;
+   }
+  
+  
+  .service-sections {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 20px; /* Space between cards */
+    overflow-x: auto;
+  }
+  
+  .service-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* Distribute space evenly among cards */
+    min-width: 200px; 
+  }
+  
+  .service-section h2 {
+    color: #1A3D7C;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon and text */
+  }
+  
+  .service-section p {
+    color: #34495e;
+    text-align: justify;
+    margin:0;
+    line-height: 1.4;
+    font-family: 'Lato', sans-serif;
+  
+  }
+  
+  .icon {
+    margin-right: 10px;
+    color:  #50be60; /* Icon color */
+    font-size: 27px; /* Adjust icon size */
+    min-width: 24px;
+    min-height: 24px;
+   flex-shrink: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-section {
+      flex: 1 1 100%; /* Stack cards vertically on smaller screens */
+    }
+  } 
