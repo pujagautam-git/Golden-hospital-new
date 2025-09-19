@@ -6,7 +6,7 @@ import Appointbook from '../../Components/Appointbook/Appointbook';
 import Views from '../../Components/Views/Views';
 import { useNavigate } from 'react-router-dom';
 // import HomeProcessSection from '../../Components/Workprocess/Workprocess';
-import FacebookPage from '../../Components/FacebookPage/FacebookPage';
+import FacebookPage from '../../Components/Facebookpage/FacebookPage';
 import PatientStats from "../../Components/PatientStats/PatientStats"
 import AnimationSection from '../../Components/Animation/Animation';
 // import HospitalTiming from '../../Components/HospitalTiming/HospitalTiming';
