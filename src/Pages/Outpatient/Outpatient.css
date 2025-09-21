@@ -29,6 +29,7 @@
   font-size: 1.1rem;
   line-height: 1.7;
   color: #605d5d;
+  text-align: justify;
   margin-bottom: 15px;
 }
 
@@ -171,4 +172,50 @@
 
 .out-faq-item.active .out-faq-question {
   color: #113c8d;
+}
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Large laptops (≤ 1200px) */
+@media (max-width: 1200px) {
+  .section-text h2 {
+    font-size: 2.4rem;
+  }
+  .opd-container {
+    max-width: 90%;
+  }
+}
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-text h2 {
+    font-size: 2.2rem;
+  }
+  .faq-question {
+    font-size: 17px;
+  }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .section {
+    padding: 40px 15px;
+  }
+  .section-text h2 {
+    font-size: 1.8rem;
+  }
+  .section-text p {
+    font-size: 1rem;
+  }
+  .opd-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .faq-question {
+    font-size: 16px;
+  }
 }

@@ -28,6 +28,7 @@
 .family-text p {
   font-size: 1.1rem;
   line-height: 1.7;
+  text-align: justify;
   color: #605d5d;
   margin-bottom: 15px;
 }
@@ -285,6 +286,10 @@
 }
 
 @media (max-width: 480px) {
+  .family-container{
+    flex-direction: column;
+    text-align: center;
+  }
   .family-text h2 {
     font-size: 1.8rem;
   }

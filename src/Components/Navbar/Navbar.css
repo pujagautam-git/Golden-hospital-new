@@ -2,6 +2,7 @@
 * { box-sizing: border-box; }
 
 .navbar {
+  height:120px;
   position: fixed;
   top: 0;
   left: 0;
@@ -42,6 +43,9 @@
 /* logo stays left and does not grow */
 .nav-left {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100%; /* match navbar height */
 }
 
 /* center grows to take remaining space and centers its contents */
@@ -58,8 +62,8 @@
 
 /* ---------- Logo ---------- */
 .nav-logo {
-  height: 90px;
-  width: auto;
+  height: 110px;
+  width: 130px;
   object-fit: contain;
   display: block;
   transition: height 0.25s ease;
@@ -67,6 +71,7 @@
 
 .navbar.scrolled .logo {
   height: 50px;
+  
 }
 
 /* ---------- Center nav list (horizontal) ---------- */
@@ -267,6 +272,7 @@
 @media (max-width: 1024px) {
   .nav-logo {
     height: 80px;
+    width:auto;
   }
 
   .nav-center ul {
@@ -276,8 +282,31 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .navbar{
+    padding:10px 30px;
+  }
+   /* Force logo left & hamburger right */
+  .top-row {
+    justify-content: space-between; /* keep them apart */
+    align-items: center;
+  }
+
+  .nav-left {
+    flex: 0 0 auto;
+  }
+
+  .nav-right {
+    flex: 0 0 auto;
+    margin-left: auto; /* push to far right */
+  }
+
+  .nav-logo {
+    height: 70px; /* slightly smaller for mobile */
+    width: auto;
+  }
   .hamburger {
     display: block;
+    cursor: pointer;
   }
 
   .nav-center {
@@ -299,6 +328,7 @@
   .nav-center ul {
     flex-direction: column;
     width: 100%;
+    gap:15px;
   }
 
   .desktop-call,
@@ -337,5 +367,28 @@
     min-width: 100%;
     padding-left: 0;
     gap: 6px 0;
+  }
+}
+/* Very small devices (486px and below) */
+@media (max-width: 486px) {
+  .nav-logo {
+    height: 70px; /* slightly smaller logo */
+  }
+
+  .top-row {
+    padding: 0 12px; /* tighter padding to save space */
+    gap: 5px;
+  }
+
+  .nav-center {
+    padding: 12px 15px; /* slightly smaller menu padding */
+  }
+
+  .nav-center ul {
+    gap: 12px; /* reduce spacing between links */
+  }
+
+  .hamburger {
+    font-size: 22px; /* slightly smaller hamburger */
   }
 }

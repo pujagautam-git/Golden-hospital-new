@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import logo from "../../assets/Home/goldenlogo.jpeg";
+import logo from "../../assets/Home/logopic.png";
 
 import "./Navbar.css";
 // import logo from "../../assets/Home/logo.png";

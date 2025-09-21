@@ -130,19 +130,23 @@
   background-color: #1d316e;
 } */
 
-.overview-right {
+.about-overview-right {
   flex: 1;
   min-width: 300px;
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.overview-right img {
-  max-width: 100%;
-  height: 60vh;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-}
+.about-overview-video {
+    width: 100%;
+  border-radius: 12px;
+  max-width: 580px;
+  height: 50vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+} 
 
 .solution-section {
   background-color: #0f2f6a;
@@ -348,132 +352,122 @@ color: #fff;
   flex: 1;
   min-width: 300px;
   padding: 20px;
-  left:60px;
-  
   text-align: center;
+ 
 }
 
-.manage-video {
-  width: 100%;
-  border-radius: 12px;
-  max-width: 580px;
-  height: 360px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.manage-right img {
+   max-width: 100%;
+   width:500px;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+ 
 }
+/* ----------------- RESPONSIVE ----------------- */
 
-/* ✅ EXISTING STYLES ABOVE... KEEP THEM */
-
-/* ---------- RESPONSIVE DESIGN ---------- */
-
-/* Tablet View */
-@media (max-width: 1024px) {
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
   .overview-container,
   .solution-container,
   .performance-content,
   .manage-container {
-    flex-direction: column;
-    text-align: center;
     gap: 30px;
-  }
-
-  .overview-left, .overview-right,
-  .solution-left, .solution-right,
-  .performance-left, .performance-cards,
-  .manage-left, .manage-right {
-    flex: 1 1 100%;
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .overview-title, .solution-title, .manage-title, .performance-title {
-    font-size: 2.5rem;
-  }
-
-  .overview-right img,
-  .solution-left img {
-    height: auto;
-    max-height: 350px;
   }
 
   .performance-cards {
     grid-template-columns: 1fr 1fr;
   }
-
-  .manage-video {
-    max-width: 90%;
-    height: auto;
-  }
 }
 
-/* Mobile View */
-@media (max-width: 768px) {
-  .breadcrumb-container {
-    padding: 0 10px;
+/* Tablets */
+@media (max-width: 992px) {
+  .overview-left,
+  .about-overview-right,
+  .solution-left,
+  .solution-right,
+  .performance-left,
+  .performance-cards,
+  .manage-left,
+  .manage-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .about-overview-video,
+  .solution-left img,
+  .solution-right img,
+  .manage-right img {
+    max-height: 400px;
     height: auto;
-    text-align: center;
-  }
-
-  .breadcrumb-container h1 {
-    font-size: 24px;
-  }
-
-  .overview-title, .solution-title, .manage-title, .performance-title {
-    font-size: 2rem;
-  }
-
-  .overview-description,
-  .solution-description,
-  .manage-description,
-  .performance-description {
-    font-size: 15px;
-  }
-
-  .overview-right img,
-  .solution-left img {
-    width: 100%;
-    max-height: 300px;
   }
 
   .performance-cards {
     grid-template-columns: 1fr;
   }
-
-  .performance-title {
-    font-size: 2.5rem;
-  }
 }
 
-/* Small Mobile View */
-@media (max-width: 480px) {
-  .overview-title, .solution-title, .manage-title, .performance-title {
-    font-size: 1.8rem;
-    line-height: 1.2;
+/* Small tablets / large mobiles */
+@media (max-width: 768px) {
+  .overview-section,
+  .solution-section,
+  .performance-section,
+  .manage-section {
+    padding: 40px 15px;
   }
 
-  .overview-description,
-  .solution-description,
-  .manage-description,
-  .performance-description {
-    font-size: 14px;
-    line-height: 1.6;
+  .overview-title,
+  .solution-title,
+  .performance-title,
+  .manage-title {
+    font-size: 2rem;
+  }
+
+  .performance-left {
+    text-align: center;
   }
 
   .performance-button {
     width: 100%;
-    font-size: 14px;
-    padding: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .breadcrumb-container h1 {
+    font-size: 20px;
+  }
+
+  .overview-title,
+  .solution-title,
+  .performance-title,
+  .manage-title {
+    font-size: 1.6rem;
+  }
+
+  .overview-description,
+  .solution-description,
+  .performance-description,
+  .manage-description {
+    font-size: 0.95rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
   }
 
   .performance-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .performance-card p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
-  .manage-video {
-    width: 100%;
-    height: auto;
+  .about-overview-video,
+  .solution-left img,
+  .solution-right img,
+  .manage-right img {
+    max-height: 250px;
   }
 }

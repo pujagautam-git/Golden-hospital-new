@@ -28,6 +28,7 @@
 .pharmacy-text p {
   font-size: 1.1rem;
   line-height: 1.7;
+  text-align: justify;
   color: #605d5d;
   margin-bottom: 15px;
 }
@@ -110,4 +111,186 @@
 .faq-icon {
   font-size: 14px;
   color:#000;
+}
+.pharmacy-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.pharmacy-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.pharmacy-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.pharmacy-text h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e3a6f;
+}
+
+.pharmacy-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #605d5d;
+  margin-bottom: 15px;
+}
+
+.pharmacy-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.pharmacy-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* ---------- KEY SECTION ---------- */
+.key-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 8%;
+  background: #f9f9f9;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.key-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.key-subtitle {
+  letter-spacing: 6px;
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.key-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e3a5f;
+}
+
+.key-faq-right {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.key-faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+}
+
+.key-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.key-faq-question:hover {
+  color: #1e3a5f;
+}
+
+.key-faq-answer {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.faq-icon {
+  font-size: 14px;
+  color:#000;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .pharmacy-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .pharmacy-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .pharmacy-text p {
+    font-size: 1rem;
+  }
+
+  .key-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 5%;
+  }
+
+  .key-title {
+    font-size: 28px;
+  }
+
+  .key-faq-right {
+    min-width: 100%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .pharmacy-section {
+    padding: 40px 15px;
+  }
+
+  .pharmacy-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .pharmacy-text p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .key-section {
+    padding: 30px 5%;
+  }
+
+  .key-title {
+    font-size: 24px;
+  }
+
+  .key-faq-question {
+    font-size: 16px;
+  }
+
+  .key-faq-answer {
+    font-size: 14px;
+  }
 }

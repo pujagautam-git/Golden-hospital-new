@@ -68,10 +68,10 @@ const About = () => {
          {/* <a href="/package"> <button className="overview-btn">Check Prices</button></a> */}
         </div>
         {/* Right Image */}
-        <div className="overview-right">
+        <div className="about-overview-right">
           {/* <img src={""} alt="image of machine" /> */}
            <iframe
-    className="manage-video"
+    className="about-overview-video"
     src="https://www.youtube.com/embed/Q1bBMMjNQNw?autoplay=1&mute=1&loop=1&playlist=Q1bBMMjNQNw"
     title="World Class Medical Equipment"
     frameBorder="0"

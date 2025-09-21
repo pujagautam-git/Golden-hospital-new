@@ -3,14 +3,13 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* Overview Section */
+/* ---------- OVERVIEW SECTION ---------- */
 .healthcamp-overview {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 40px;
   padding: 60px 8%;
-  /* background: linear-gradient(135deg, #e6f7f5, #f1fcff); */
 }
 
 .overview-left {
@@ -34,17 +33,19 @@
 .overview-right {
   flex: 1;
   min-width: 280px;
+  text-align: center;
 }
 
 .overview-right img {
   width: 100%;
   max-width: 550px;
-  height:350px;
+  height: 350px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
-/* Gallery Section */
+/* ---------- GALLERY SECTION ---------- */
 .healthcamp-gallery {
   padding: 50px 8%;
   text-align: center;
@@ -73,4 +74,66 @@
 
 .gallery-grid img:hover {
   transform: scale(1.05);
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .healthcamp-overview {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+    gap: 30px;
+  }
+
+  .overview-left h2 {
+    font-size: 28px;
+  }
+
+  .overview-left p {
+    font-size: 16px;
+  }
+
+  .overview-right img {
+    height: 300px;
+    max-width: 100%;
+  }
+
+  .healthcamp-gallery h2 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .healthcamp-overview {
+    padding: 40px 15px;
+    gap: 20px;
+  }
+
+  .overview-left h2 {
+    font-size: 22px;
+  }
+
+  .overview-left p {
+    font-size: 15px;
+  }
+
+  .overview-right img {
+    height: 220px;
+    max-width: 100%;
+  }
+
+  .healthcamp-gallery {
+    padding: 40px 15px;
+  }
+
+  .healthcamp-gallery h2 {
+    font-size: 20px;
+  }
+
+  .gallery-grid {
+    gap: 15px;
+  }
 }

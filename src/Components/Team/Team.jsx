@@ -33,7 +33,7 @@ const teamMembers = [
     },
   },
   {
-    name: "MR.Sanatan Mandal",
+    name: "Mr.Sanatan Mandal",
     role: "Board of Director",
     image: sanatan,
     description:
@@ -46,7 +46,7 @@ const teamMembers = [
     },
   },
   {
-    name: "Dr. Jiyahul Haq",
+    name: "Mr. Jiyahul Haq",
     role: "CEO",
     image: jiyahul,
     description:

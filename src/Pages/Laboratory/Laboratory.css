@@ -28,6 +28,7 @@
 .lab-over-text p {
   font-size: 1.1rem;
   line-height: 1.7;
+  text-align: justify;
   color: #605d5d;
   margin-bottom: 15px;
 }
@@ -155,3 +156,229 @@
   color: #222;
 }
 
+/* ---------- LAB OVERVIEW SECTION ---------- */
+.lab-over-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.lab-over-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.lab-over-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.lab-over-text h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e3a6f;
+}
+
+.lab-over-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #605d5d;
+  margin-bottom: 15px;
+}
+
+.lab-over-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.lab-over-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* ---------- LAB BENEFITS ---------- */
+.lab-benefits-section {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 50px 20px;
+}
+
+.lab-benefits-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.lab-benefits-slider {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lab-benefit-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lab-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lab-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.lab-benefit-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ---------- LAB SERVICES ---------- */
+.lab-services-section {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.lab-services-intro {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.lab-services-grid {
+  display: grid;
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.lab-service-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lab-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.lab-service-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.lab-service-overlay {
+  background: #fff;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.lab-service-subtitle {
+  color: #1565c0;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.lab-service-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #222;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .lab-over-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .lab-over-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .lab-over-text p {
+    font-size: 1rem;
+  }
+
+  .lab-benefits-title {
+    font-size: 1.8rem;
+  }
+
+  .lab-benefit-card {
+    width: 220px;
+  }
+
+  .lab-services-intro {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .lab-over-section,
+  .lab-benefits-section,
+  .lab-services-section {
+    padding: 40px 15px;
+  }
+
+  .lab-over-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .lab-over-text p {
+    font-size: 0.95rem;
+  }
+
+  .lab-benefits-title {
+    font-size: 1.5rem;
+  }
+
+  .lab-benefit-card {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .lab-service-title {
+    font-size: 1rem;
+  }
+
+  .lab-service-subtitle {
+    font-size: 0.85rem;
+  }
+}

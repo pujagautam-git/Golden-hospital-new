@@ -28,6 +28,7 @@
 .patient-text p {
   font-size: 1.1rem;
   line-height: 1.7;
+  text-align: justify;
   color: #605d5d;
   margin-bottom: 15px;
 }
@@ -39,12 +40,13 @@
 }
 
 .patient-image img {
-    
   width: 100%;
   height: auto;
   border-radius: 4px;
   object-fit: cover;
 }
+
+/* -------- Benefits Section -------- */
 .benefits-container {
   padding: 60px 30px;
   background-color: #f7f7f7;
@@ -90,6 +92,8 @@
   text-align: center;
   line-height: 1.4;
 }
+
+/* -------- Inpatient Section -------- */
 .inpatient-section {
   display: flex;
   max-width: 1000px;
@@ -121,7 +125,6 @@
 
 .inpatient-title span {
   color: #113c8d;
-  /* border-bottom: 2px solid #113c8d; */
 }
 
 .inpatient-right {
@@ -166,6 +169,8 @@
 .inpat-faq-item.active .inpat-faq-question {
   color: #113c8d;
 }
+
+/* -------- Admission Section -------- */
 .admission-section {
   padding: 60px 30px;
   background-color: #fff;
@@ -185,6 +190,7 @@
   gap: 40px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .admission-tab {
@@ -223,6 +229,8 @@
   color: #333;
   line-height: 1.6;
 }
+
+/* -------- Report Section -------- */
 .report-section {
   padding: 40px 0;
   background-color: #fff;
@@ -237,8 +245,9 @@
   gap: 40px;
   flex-wrap: wrap;
 }
-.report-image{
-   flex: 1;
+
+.report-image {
+  flex: 1;
   max-width: 600px;
   padding: 20px;
   text-align: center;
@@ -249,6 +258,7 @@
   max-width: 650px;
   height: 400px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .report-content {
@@ -290,10 +300,11 @@
   color: #757171;
   font-size: 16px;
   line-height: 1.4;
-  /* font-weight: bold; */
 }
+
+/* -------- Right Section -------- */
 .right-section {
-  background-color: #f8f9fa; /* Light background */
+  background-color: #f8f9fa;
   padding: 30px 20px;
   text-align: center;
   margin: 50px;
@@ -307,7 +318,7 @@
 .right-header {
   font-size: 44px;
   font-weight: 700;
-  color: #1e3a6f; /* Darker text */
+  color: #1e3a6f;
   margin-bottom: 10px;
 }
 
@@ -319,13 +330,13 @@
 }
 
 .right-btn {
-  display:inline-block;
+  display: inline-block;
   padding: 12px 28px;
   font-size: 18px;
-  background-color: #1e3a6f; /* Blue button */
+  background-color: #1e3a6f;
   color: white;
   border: none;
-   border-radius: 6px;
+  border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -333,4 +344,91 @@
 
 .right-btn:hover {
   background-color: #2563eb;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Laptops / Large Screens */
+@media (max-width: 1200px) {
+  .patient-text h2 {
+    font-size: 2.4rem;
+  }
+  .inpatient-title {
+    font-size: 30px;
+  }
+  .report-image img {
+    height: 350px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .patient-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .patient-text h2 {
+    font-size: 2.2rem;
+  }
+  .patient-text p {
+    font-size: 1rem;
+  }
+  .inpatient-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .admission-tabs {
+    gap: 20px;
+  }
+  .report-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .report-image img {
+    height: auto;
+  }
+}
+
+/* Large Mobiles */
+@media (max-width: 768px) {
+  .patient-text h2 {
+    font-size: 1.8rem;
+  }
+  .benefits-title {
+    font-size: 24px;
+  }
+  .inpatient-title {
+    font-size: 26px;
+  }
+  .admission-title {
+    font-size: 24px;
+  }
+  .right-header {
+    font-size: 32px;
+  }
+  .right-section {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .patient-text h2 {
+    font-size: 1.6rem;
+  }
+  .patient-text p,
+  .report-intro,
+  .report-feature p,
+  .right-description {
+    font-size: 0.9rem;
+  }
+  .right-header {
+    font-size: 26px;
+  }
+  .right-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
 }

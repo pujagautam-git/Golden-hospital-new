@@ -40,8 +40,8 @@ const FacebookPage = () => {
     // Services with icons
     const services = [
         {
-          title: "Best Eye Treatment",
-          description: "Best  Eye health care facility.",
+          title: "Best Medical Treatment",
+          description: "Best  Medical health care facility.",
           icon: <Stethoscope className="staticon" />
         },
         {

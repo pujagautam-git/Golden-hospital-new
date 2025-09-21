@@ -82,7 +82,7 @@
   }
   .ambulance {
     width: 300px;
-    bottom: -100px;
+    bottom: -150px;
   }
 }
 
@@ -115,8 +115,8 @@
   }
 
   .ambulance {
-    width: 65%;
-    bottom: -50px;
+    width: 60%;
+    bottom: -115px;
     left: -100%;
     animation: driveMobile 6s linear forwards;
   }
@@ -144,7 +144,7 @@
   }
   .ambulance {
     width: 75%;
-    bottom: -40px;
+    bottom: -90px;
   }
 }
 /* Tablet / iPad Portrait & Landscape (820px – 1180px) */

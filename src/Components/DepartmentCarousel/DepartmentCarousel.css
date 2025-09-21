@@ -59,3 +59,86 @@
 .slick-dots li.slick-active button:before {
   color: #0073e6;
 }
+/* Large Laptops / Desktops */
+@media (max-width: 1200px) {
+  .carousel-title {
+    font-size: 28px;
+  }
+  .dept-card {
+    padding: 25px 18px;
+    min-height: 280px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .carousel-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  .dept-card {
+    padding: 20px 15px;
+    min-height: 260px;
+  }
+  .dept-card h3 {
+    font-size: 16px;
+  }
+  .dept-card p {
+    font-size: 13px;
+  }
+  .dept-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Large Mobile Devices */
+@media (max-width: 768px) {
+  .department-carousel {
+    padding: 40px 15px;
+  }
+  .carousel-title {
+    font-size: 22px;
+  }
+  .dept-card {
+    min-height: 240px;
+    padding: 18px 12px;
+  }
+  .dept-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  .dept-card h3 {
+    font-size: 15px;
+  }
+  .dept-card p {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .department-carousel {
+    padding: 30px 10px;
+  }
+  .carousel-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .dept-card {
+    padding: 15px 10px;
+    min-height: auto;
+  }
+  .dept-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .dept-card h3 {
+    font-size: 14px;
+  }
+  .dept-card p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}

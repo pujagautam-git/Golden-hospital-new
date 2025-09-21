@@ -28,6 +28,7 @@
 .emergency-text p {
   font-size: 1.1rem;
   line-height: 1.7;
+  text-align: justify;
   color: #605d5d;
   margin-bottom: 15px;
 }
@@ -145,4 +146,50 @@
   margin-top: 8px;
   padding-left: 5px;
   line-height: 1.5;
+}
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Large Laptops (≤ 1200px) */
+@media (max-width: 1200px) {
+  .emergency-text h2 {
+    font-size: 2.4rem;
+  }
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .emergency-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .emergency-text h2 {
+    font-size: 2.2rem;
+  }
+  .emergency-text p {
+    font-size: 1rem;
+  }
+  .emer-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobiles (≤ 600px) */
+@media (max-width: 600px) {
+  .emergency-section,
+  .emergency-benefits-section,
+  .emergency-faq-section {
+    padding: 40px 15px;
+  }
+  .emergency-text h2 {
+    font-size: 1.8rem;
+  }
+  .benefit-card {
+    padding: 20px;
+  }
+  .emer-faq-question {
+    font-size: 0.95rem;
+  }
 }

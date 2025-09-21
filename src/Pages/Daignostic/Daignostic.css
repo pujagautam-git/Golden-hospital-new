@@ -148,8 +148,8 @@
 .swiper-button-prev,
 .swiper-button-next {
   color: #009688 !important; /* Change color (Green-Blue) */
-  width: 35px !important;    /* Smaller width */
-  height: 35px !important;   /* Smaller height */
+  width: 2.5em;   /* Smalle;r width */
+  height: 2.5em;  /* Smaller height */
   background: rgba(0, 150, 136, 0.1); /* Light background circle */
   border-radius: 50%;
   display: flex;
@@ -168,4 +168,92 @@
 .swiper-button-next::after {
   font-size: 16px !important; /* Reduce arrow icon size */
   font-weight: bold;
+}
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  .hero-overlay h1 {
+    font-size: 32px;
+  }
+
+  .hero-overlay p {
+    font-size: 16px;
+  }
+
+  .diagnostic-overview h2 {
+    font-size: 28px;
+  }
+
+  .diagnostic-overview p {
+    font-size: 16px;
+  }
+
+  .diagnostic-features {
+    gap: 20px;
+    padding: 30px 5%;
+  }
+
+  .diagnostic-card {
+    padding: 20px 12px;
+  }
+
+  .diagnostic-benefits h2 {
+    font-size: 26px;
+  }
+
+  .benefit-slide {
+    max-width: 220px;
+    padding: 20px 12px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  .hero-overlay h1 {
+    font-size: 24px;
+  }
+
+  .hero-overlay p {
+    font-size: 14px;
+  }
+
+  .diagnostic-overview h2 {
+    font-size: 22px;
+  }
+
+  .diagnostic-overview p {
+    font-size: 14px;
+  }
+
+  .diagnostic-features {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px 15px;
+  }
+
+  .diagnostic-card {
+    padding: 15px 10px;
+  }
+
+  .diagnostic-benefits h2 {
+    font-size: 22px;
+  }
+
+  .benefit-slide {
+    max-width: 180px;
+    padding: 15px 10px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 2em;
+    height: 2em;
+    font-size: 1em;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 0.9em;
+  }
 }
