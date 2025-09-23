@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import "./Testimonialslider.css";
 import Slider from "react-slick";
 
@@ -48,47 +48,47 @@ const testimonialslider = [
 ];
 
 const TestimonialSlider = () => {
+    const sliderRef = useRef(null);
+
+     const getSlidesToShow = () => {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  };
   const settings = {
     dots: true,
     infinite: true,
-    speed: 600,
-    slidesToShow: 3,
+    speed: 500,
+    slidesToShow: getSlidesToShow(),
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } }
+      { breakpoint: 768, settings: { slidesToShow: 1, centerMode:true,centerPadding:"0px", }, }
     ]
   };
-  // const [currentSlide, setCurrentSlide] = useState(0);
-
-  // const totalSlides = Math.ceil(testimonialslider.length / 3);
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  //   }, 5000);
-  //   return () => clearInterval(timer);
-  // }, [totalSlides]);
-
-  // const handleDotClick = (index) => {
-  //   setCurrentSlide(index);
-  // };
+  
+ useEffect(() => {
+    // Trigger resize so Slick recalculates widths correctly
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 100);
+  }, []);
 
   return (
      <div className="slider-section">
       <div className="slider-container">
         <p className="slider-subtitle">TESTIMONIAL</p>
         <h2 className="slider-title">What Patients Say About Us.</h2>
-        <Slider {...settings}>
-          {testimonialslider.map((t, index) => (
-            <div className="slider-card" key={index}>
+        <Slider  ref={sliderRef}  {...settings}>
+          {testimonialslider.map((t, id) => (
+            <div className="slider-card" key={id}>
               <div className="slider-profile">
-                <img src={t.img} alt={t.name} />
+                <img src={t.image} alt={t.name} />
                 <div>
                   <h4 className="slider-head">{t.name}</h4>
-                  <p className="slider-role">{t.title}</p>
+                  <p className="slider-role">{t.role}</p>
                 </div>
               </div>
               <p className="slider-text">{t.text}</p>

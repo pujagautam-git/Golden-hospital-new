@@ -2,6 +2,8 @@
   padding: 60px 20px;
   background: #f9fbff;
   text-align: center;
+  max-width: 1200px;
+  margin:0 auto;
 }
 
 .carousel-title {
@@ -11,15 +13,24 @@
   margin-bottom: 40px;
 }
 
+/* Ensure each slick slide wrapper takes full width */
+.dept-card-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Department Cards */
 .dept-card {
   background: #fff;
   border-radius: 12px;
-  padding: 30px 20px;
-  margin: 0 10px;
+  padding: 30px 40px;
+  margin: 0 20px;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease;
   min-height: 300px;
+  max-width: 350px;
+  width:100%;
 }
 
 .dept-card:hover {
@@ -63,6 +74,7 @@
 @media (max-width: 1200px) {
   .carousel-title {
     font-size: 28px;
+    
   }
   .dept-card {
     padding: 25px 18px;
@@ -97,6 +109,10 @@
   .department-carousel {
     padding: 40px 15px;
   }
+   .dept-card-wrapper {
+    padding: 0; /* remove extra padding from slick slide */
+  }
+
   .carousel-title {
     font-size: 22px;
   }
@@ -115,6 +131,11 @@
   .dept-card p {
     font-size: 12px;
   }
+   .slider-container,
+  .department-carousel {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }
 
 /* Small Mobile Devices */
@@ -129,6 +150,8 @@
   .dept-card {
     padding: 15px 10px;
     min-height: auto;
+    max-width: 95%;
+    margin: 0 auto;
   }
   .dept-icon {
     width: 50px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useRef} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -35,32 +35,53 @@ const departments = [
 ];
 
 const DepartmentCarousel = () => {
+  const sliderRef = useRef(null);
+
+   // ✅ Pick correct slidesToShow on first load
+  const getSlidesToShow = () => {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  };
+
   const settings = {
     dots: true,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2500, // spins every 2.5 seconds
     speed: 600,
-    slidesToShow: 3,
+    slidesToShow: getSlidesToShow(),
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024, // tablet
-        settings: { slidesToShow: 2 },
-      },
+        settings: { slidesToShow: 2, arrows:true}},
+      
       {
         breakpoint: 768, // mobile
-        settings: { slidesToShow: 1 },
+        settings: { slidesToShow: 1, arrows:false, dots:true },
       },
+       {
+      breakpoint: 480, // very small phones
+      settings: { slidesToShow: 1, arrows:false, dots:true } // ✅ Still 1 card
+    },
     ],
   };
+
+   useEffect(() => {
+    // Force Slick to recalc on mount
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 100);
+  }, []);
+
 
   return (
     <section className="department-carousel">
       <h2 className="carousel-title">Optimum Caring</h2>
-      <Slider {...settings}>
+      <Slider key={window.innerWidth} {...settings}>
   {departments.map((dept, index) => (
-    <div key={index}>
+    <div key={index} className="dept-card-wrapper">
       <div className="dept-card">
         {dept.icon}
         <h3>{dept.name}</h3>
@@ -68,7 +89,7 @@ const DepartmentCarousel = () => {
       </div>
     </div>
   ))}
-</Slider>
+</Slider>  
     </section>
   );
 };
