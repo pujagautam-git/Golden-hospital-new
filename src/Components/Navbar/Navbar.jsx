@@ -52,22 +52,42 @@ const Navbar = () => {
               <li
                 className="dropdown"
                onClick={() => setShowServices(!showServices)} // click toggle for mobile
-  onMouseEnter={() => window.innerWidth > 768 && setShowServices(true)} // hover only on desktop
-  onMouseLeave={() => window.innerWidth > 768 && setShowServices(false)}
-  >
-                <Link to="/services" className="nav-button">
+                 onMouseEnter={() => window.innerWidth > 768 && setShowServices(true)} // hover only on desktop
+                 onMouseLeave={() => window.innerWidth > 768 && setShowServices(false)}
+                  >
+                <Link to="/services" className="nav-button"  onClick={() => setIsMenuOpen(false)}>
                   OUR SERVICES <FaChevronDown className="chevron" />
                 </Link>
                 {showServices && (
                   <ul className="dropdown-menu services-menu">
-                    <li><Link to="/outpatient">OutPatient Services</Link></li>
-                    <li><Link to="/inpatient">InPatient Services</Link></li>
-                    <li><Link to="/emergency">Emergency Services</Link></li>
-                    <li><Link to="/pharmacy">Pharmacy Services</Link></li>
-                    <li><Link to="/Laboratory">Laboratory Services</Link></li>
+                    <li><Link to="/outpatient"onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false); }}>OutPatient Services</Link></li>
+
+                    <li><Link to="/inpatient" onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>InPatient Services</Link></li>
+
+                    <li><Link to="/emergency" onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>Emergency Services</Link></li>
+
+                    <li><Link to="/pharmacy" onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>Pharmacy Services</Link></li>
+
+                    <li><Link to="/Laboratory" onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>Laboratory Services</Link></li>
+
                     {/* <li><Link to="/diagnostic">Diagnostic Services</Link></li> */}
-                    <li><Link to="/healthcamp">Specialized Health Camps</Link></li>
-                    <li><Link to="/familyplanning">Family Planning Services</Link></li>
+                    <li><Link to="/healthcamp" onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>Specialized Health Camps</Link></li>
+
+                    <li><Link to="/familyplanning" onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>Family Planning Services</Link></li>
                     {/* <li><Link to="/safemother">Safe Motherhood Services</Link></li> */}
                   </ul>
                 )}
@@ -81,17 +101,25 @@ const Navbar = () => {
               <li
                 className="dropdown"
                onClick={() => setShowDepartment(!showDepartment)}
-  onMouseEnter={() => window.innerWidth > 768 && setShowDepartment(true)}
-  onMouseLeave={() => window.innerWidth > 768 && setShowDepartment(false)}
-              >
-                <Link to="/department"className="nav-button">
+               onMouseEnter={() => window.innerWidth > 768 && setShowDepartment(true)}
+               onMouseLeave={() => window.innerWidth > 768 && setShowDepartment(false)}
+                >
+                <Link to="/department"className="nav-button"  onClick={() => setIsMenuOpen(false)}>
                   DEPARTMENT <FaChevronDown className="chevron" />
                 </Link>
                 {showDepartment && (
                   <ul className="dropdown-menu">
-                    <li><Link to="/surgical">Surgical Department</Link></li>
-                    <li><Link to="/medical">Medical Department </Link></li>
-                  <li><Link to="/diagnostic">Diagnostic Department</Link></li>
+                    <li><Link to="/surgical"onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>Surgical Department</Link></li>
+
+                    <li><Link to="/medical" onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>Medical Department </Link></li>
+
+                  <li><Link to="/diagnostic" onClick={() => { 
+          setIsMenuOpen(false); 
+          setShowServices(false);}}>Diagnostic Department</Link></li>
                   </ul>
                 )}
               </li>
@@ -120,9 +148,9 @@ const Navbar = () => {
 
               <li className="mobile-whatsapp">
   <a
-    href="https://wa.me/9852070381"
+    href="https://wa.me/9852070381" 
     target="_blank"
-    rel="noopener noreferrer"
+    rel="noopener noreferrer"   
   >
     <button className="nav-btn whatsapp-btn">
       <FaWhatsapp className="whatsapp-icon" /> WhatsApp

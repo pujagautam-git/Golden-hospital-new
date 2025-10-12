@@ -1,4 +1,4 @@
-.appointment-section {
+.appoint-section {
   background-color: #00332e; /* Dark green background */
   padding: 40px 20px;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.appointment-container {
+.appoint-container {
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -15,30 +15,30 @@
   color: #fff;
 }
 
-.appointment-left {
+.appoint-left {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.appointment-icon {
+.appoint-icon {
   font-size: 60px;
   color: #60f16f; /* Peach/orange icon */
 }
 
-.appointment-text h1 {
+.appoint-text h1 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-.appointment-text p {
+.appoint-text p {
   font-size: 1rem;
   line-height: 1.5;
   color: #d1d1d1;
 }
 
-.appointment-right {
+.appoint-right {
   display: flex;
   align-items: center;
 }
@@ -69,18 +69,18 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .appointment-container {
+  .appoint-container {
     flex-direction: column;
     text-align: center;
     gap: 20px;
   }
 
-  .appointment-left {
+  .appoint-left {
     flex-direction: column;
     text-align: center;
   }
 
-  .appointment-icon {
+  .appoint-icon {
     font-size: 50px;
   }
 }

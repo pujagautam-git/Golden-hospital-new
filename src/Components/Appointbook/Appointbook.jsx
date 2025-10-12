@@ -1,17 +1,18 @@
 import React from "react";
 import "./Appointbook.css";
+import { Link } from "react-router-dom";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
 const Appointment = () => {
   return (
-    <section className="appointment-section">
-      <div className="appointment-container">
+    <section className="appoint-section">
+      <div className="appoint-container">
         {/* Left side with icon & text */}
-        <div className="appointment-left">
-          <div className="appointment-icon">
+        <div className="appoint-left">
+          <div className="appoint-icon">
             <FaRegCalendarAlt />
           </div>
-          <div className="appointment-text">
+          <div className="appoint-text">
             <h1>Open For Appointments</h1>
             <p>
               We are delighted to announce that our doors are open, and we are
@@ -21,10 +22,10 @@ const Appointment = () => {
         </div>
 
         {/* Right side button */}
-        <div className="appointment-right">
-          <button className="appoint-btn">
+        <div className="appoint-right">
+       <Link to="/appointment">  <button className="appoint-btn">
             Book Appointment <FaRegCalendarAlt className="btn-icon" />
-          </button>
+          </button></Link>
         </div>
       </div>
     </section>

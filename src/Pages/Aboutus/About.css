@@ -9,32 +9,32 @@
   margin-bottom: 30px;
 }
 
-.breadcrumb-overlay {
-  background: rgba(240, 240, 240, 0.9);
+.about-breadcrumb-overlay {
+  background: rgba(203, 186, 186, 0.622);
   padding: 40px 20px;
 }
 
-.breadcrumb-container {
+.about-breadcrumb-container {
   max-width: 1200px;
   margin: 0 auto;
   height:30px;
 }
 
-.breadcrumb-container p {
+.about-breadcrumb-container p {
   font-size: 14px;
   color: #555;
 }
 
-.breadcrumb-container a {
+.about-breadcrumb-container a {
   color: #0066cc;
   text-decoration: none;
 }
 
-.breadcrumb-container a:hover {
+.about-breadcrumb-container a:hover {
   text-decoration: underline;
 }
 
-.breadcrumb-container h1 {
+.about-breadcrumb-container h1 {
   font-size: 28px;
   font-weight: bold;
   color: #003366;

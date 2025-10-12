@@ -20,13 +20,19 @@ import Pharmacy from "./Pages/Pharmacy/Pharmacy";
 import HealthCamp from './Pages/Healthcamp/Healthcamp';
 import Diagnostic from './Pages/Daignostic/Daignostic';
 import FamilyPlanning from './Pages/Familyplanning/Familyplanning';
+import BookAppointment from './Components/Appointment/Appointment';
 import './App.css'
+import ScrollToTop from './Components/ScrollToTop';
 const App = () => {
 
   return (
    <BrowserRouter>
        <div className="app-container">
          <Navbar /> 
+         
+          {/* ✅ Place ScrollToTop inside Router context */}
+      <ScrollToTop />
+
         <main className="main-content">
           {/* <AdvertisementBanner/> */}
           <Routes>
@@ -47,6 +53,7 @@ const App = () => {
          <Route path="/Diagnostic" element={<Diagnostic/>} />
          <Route path="/healthcamp" element={<HealthCamp/>} />
          <Route path="/familyplanning" element={<FamilyPlanning/>} />
+         <Route path="/appointment" element={<BookAppointment/>} />
           </Routes>
         </main>
         <Footer />

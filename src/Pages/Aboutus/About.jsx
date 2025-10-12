@@ -16,8 +16,8 @@ const About = () => {
      {/* <div className="department-page"> */}
       {/* Breadcrumb Section */}
       <section className="about-breadcrumb" style={{ backgroundImage: `url(${about1})` }}>
-        <div className="breadcrumb-overlay">
-          <div className="breadcrumb-container">
+        <div className="about-breadcrumb-overlay">
+          <div className="about-breadcrumb-container">
             <p>
               <Link to="/">Home</Link> » <span>About Us</span>
             </p>
@@ -124,7 +124,7 @@ const About = () => {
                 <li>Sunday - Friday: 8:00 AM - 5:00 PM</li>
                 <li>Emergency: 24 Hours  </li> 
                 </ul>
-             <a href="/contact"> <button className="performance-button">Contact Us</button></a>
+             <Link to="/contact"> <button className="performance-button">Contact Us</button></Link>
             </div>
     
             <div className="performance-cards">

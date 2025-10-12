@@ -1,0 +1,90 @@
+.appointment-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.appointment-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.appointment-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0066cc;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #004999;
+}
+.thank-you-message {
+  background-color: #e6ffe6;
+  color: #006600;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #00b300;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .appointment-container {
+    padding: 15px;
+  }
+
+  .appointment-form input,
+  .appointment-form select,
+  .appointment-form textarea {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+  }
+}

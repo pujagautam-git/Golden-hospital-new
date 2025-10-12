@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import "./Testimonialslider.css";
+import { FaMale, FaFemale } from "react-icons/fa";
 import Slider from "react-slick";
 
 const testimonialslider = [
@@ -7,42 +8,42 @@ const testimonialslider = [
     id: 1,
     name: "Ram Basnet",
     role: "CEO of Digital Marketing",
-    image: "https://via.placeholder.com/80x80.png?text=Emily",
+    // image: "https://via.placeholder.com/80x80.png?text=Emily",
     text: "Highly skilled doctors and compassionate healthcare with a patient-centered approach. I felt truly cared for during my visit.",
   },
   {
     id: 2,
     name: "Sujan Niraula",
     role: "Student",
-    image: "https://via.placeholder.com/80x80.png?text=Mary",
+    // image: "https://via.placeholder.com/80x80.png?text=Mary",
     text: "Great experience! Caring doctors, modern facilities, and a welcoming staff. I received excellent treatment and guidance.",
   },
   {
     id: 3,
     name: "Sandya Sharma ",
     role: "Entrepreneur",
-    image: "https://via.placeholder.com/80x80.png?text=John",
+    // image: "https://via.placeholder.com/80x80.png?text=John",
     text: "Golden Hospital provides world-class service. The doctors were professional and compassionate. Highly recommend!",
   },
   {
     id: 4,
     name: "Anzela Shrestha",
     role: "Teacher",
-    image: "https://via.placeholder.com/80x80.png?text=Sophia",
+    // image: "https://via.placeholder.com/80x80.png?text=Sophia",
     text: "From check-in to discharge, everything was smooth and professional. Excellent care!",
   },
   {
     id: 5,
     name: "Saroj Mandal",
     role: "Software Engineer",
-    image: "https://via.placeholder.com/80x80.png?text=Michael",
+    // image: "https://via.placeholder.com/80x80.png?text=Michael",
     text: "State-of-the-art facilities and caring staff made my treatment experience very comfortable.",
   },
   {
     id: 6,
     name: "Ajay Shah",
     role: "Artist",
-    image: "https://via.placeholder.com/80x80.png?text=Ava",
+    // image: "https://via.placeholder.com/80x80.png?text=Ava",
     text: "Golden Hospital truly puts patients first. Doctors listened and explained everything clearly.",
   },
 ];
@@ -75,6 +76,11 @@ const TestimonialSlider = () => {
       window.dispatchEvent(new Event("resize"));
     }, 100);
   }, []);
+   const isFemale = (name) => {
+    const femaleNames = ["Sandya", "Anzela"]; // add more if needed
+    return femaleNames.some((n) => name.toLowerCase().includes(n.toLowerCase()));
+  };
+
 
   return (
      <div className="slider-section">
@@ -85,7 +91,14 @@ const TestimonialSlider = () => {
           {testimonialslider.map((t, id) => (
             <div className="slider-card" key={id}>
               <div className="slider-profile">
-                <img src={t.image} alt={t.name} />
+                 <div className="gender-icon">
+                  {isFemale(t.name) ? (
+                    <FaFemale size={50} color="#e91e63" />
+                  ) : (
+                    <FaMale size={50} color="#2196f3" />
+                  )}
+                </div>
+                {/* <img src={t.image} alt={t.name} /> */}
                 <div>
                   <h4 className="slider-head">{t.name}</h4>
                   <p className="slider-role">{t.role}</p>
