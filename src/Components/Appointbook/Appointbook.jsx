@@ -23,9 +23,9 @@ const Appointment = () => {
 
         {/* Right side button */}
         <div className="appoint-right">
-       <Link to="/appointment">  <button className="appoint-btn">
+       <Link to="/appointment" className="appoint-btn">
             Book Appointment <FaRegCalendarAlt className="btn-icon" />
-          </button></Link>
+          </Link>
         </div>
       </div>
     </section>
