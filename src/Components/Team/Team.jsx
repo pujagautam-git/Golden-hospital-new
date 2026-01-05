@@ -32,19 +32,7 @@ const teamMembers = [
       linkedin: "#",
     },
   },
-  {
-    name: "Mr.Sanatan Mandal",
-    role: "Board of Director",
-    image: sanatan,
-    description:
-      "The Board of Directors works together with our medical and management teams to make sure that every patient receives not only treatment but also trust and comfort. Our mission is to support Golden Hospital in reaching new heights in patient care.",
-    socials: {
-      facebook: "#",
-      twitter: "#",
-      instagram: "#",
-      linkedin: "#",
-    },
-  },
+  
   {
     name: "Mr. Jiyahul Haq",
     role: "CEO",
